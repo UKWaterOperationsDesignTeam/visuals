@@ -34,7 +34,7 @@ jsonSource_dma_0.addFeatures(features_dma_0);var lyr_dma_0 = new ol.layer.Vector
     attributions: '<a href=""></a>',
                                 projection: 'EPSG:3857',
                                 alwaysInRange: true,
-                                imageExtent: [-694136.024426, 6960739.711598, -70066.602576, 7943554.307998]
+                                imageExtent: [-749392.171153, 6932827.260741, -183.828775, 7960981.871114]
                             })
                         });var lyr_3hours_3 = new ol.layer.Image({
                             opacity: 1,
@@ -46,7 +46,7 @@ jsonSource_dma_0.addFeatures(features_dma_0);var lyr_dma_0 = new ol.layer.Vector
     attributions: '<a href=""></a>',
                                 projection: 'EPSG:3857',
                                 alwaysInRange: true,
-                                imageExtent: [-656249.548930, 7122216.567502, -165323.915362, 7839509.024676]
+                                imageExtent: [-677983.235832, 7114858.837427, -159570.880593, 7849795.492905]
                             })
                         });var lyr_2hours_4 = new ol.layer.Image({
                             opacity: 1,
