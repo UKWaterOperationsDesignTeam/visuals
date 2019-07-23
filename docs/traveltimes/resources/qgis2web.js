@@ -53,18 +53,15 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-         maxZoom: 28, minZoom: 1
+         maxZoom: 12, minZoom: 1
     })
 });
 
 var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
 map.addControl(layerSwitcher);
-layerSwitcher.hidePanel = function() {};
-layerSwitcher.showPanel();
-
 
     var searchLayer = new ol.SearchLayer({
-      layer: lyr_dmas_0,
+      layer: lyr_dma_0,
       colName: 'name',
       zoom: 10,
       collapsed: true,
@@ -76,7 +73,7 @@ layerSwitcher.showPanel();
     .getElementsByTagName('button')[0].className +=
     ' fa fa-binoculars';
     
-map.getView().fit([-912417.226418, 7247964.322678, -14781.729927, 8182486.627687], map.getSize());
+map.getView().fit([-967118.806155, 7146948.962608, 6953.431314, 8256144.246886], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
