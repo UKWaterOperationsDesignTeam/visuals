@@ -64,7 +64,7 @@ layerSwitcher.showPanel();
 
 
     var searchLayer = new ol.SearchLayer({
-      layer: lyr_dmalayer_0,
+      layer: lyr_dmas_0,
       colName: 'name',
       zoom: 10,
       collapsed: true,
