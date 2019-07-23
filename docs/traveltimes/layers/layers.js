@@ -1,6 +1,17 @@
 var wms_layers = [];
-
-        var lyr_OpenStreetMap_0 = new ol.layer.Tile({
+var format_dmalayer_0 = new ol.format.GeoJSON();
+var features_dmalayer_0 = format_dmalayer_0.readFeatures(json_dmalayer_0, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_dmalayer_0 = new ol.source.Vector({
+    attributions: '<a href=""></a>',
+});
+jsonSource_dmalayer_0.addFeatures(features_dmalayer_0);var lyr_dmalayer_0 = new ol.layer.Vector({
+                declutter: true,
+                source:jsonSource_dmalayer_0, 
+                style: style_dmalayer_0,
+                title: '<img src="styles/legend/dmalayer_0.png" /> dmalayer'
+            });
+        var lyr_OpenStreetMap_1 = new ol.layer.Tile({
             'title': 'OpenStreetMap',
             'type': 'base',
             'opacity': 1.000000,
@@ -10,18 +21,7 @@ var wms_layers = [];
     attributions: '<a href=""></a>',
                 url: 'http://a.tile.openstreetmap.org/{z}/{x}/{y}.png'
             })
-        });var format_RPSKirky_1 = new ol.format.GeoJSON();
-var features_RPSKirky_1 = format_RPSKirky_1.readFeatures(json_RPSKirky_1, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_RPSKirky_1 = new ol.source.Vector({
-    attributions: '<a href=""></a>',
-});
-jsonSource_RPSKirky_1.addFeatures(features_RPSKirky_1);var lyr_RPSKirky_1 = new ol.layer.Vector({
-                declutter: true,
-                source:jsonSource_RPSKirky_1, 
-                style: style_RPSKirky_1,
-                title: '<img src="styles/legend/RPSKirky_1.png" /> RPS Kirky'
-            });var format_traveltime4hours_2 = new ol.format.GeoJSON();
+        });var format_traveltime4hours_2 = new ol.format.GeoJSON();
 var features_traveltime4hours_2 = format_traveltime4hours_2.readFeatures(json_traveltime4hours_2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
 var jsonSource_traveltime4hours_2 = new ol.source.Vector({
@@ -65,25 +65,39 @@ jsonSource_traveltime1hours_5.addFeatures(features_traveltime1hours_5);var lyr_t
                 source:jsonSource_traveltime1hours_5, 
                 style: style_traveltime1hours_5,
                 title: '<img src="styles/legend/traveltime1hours_5.png" /> traveltime 1hours'
+            });var format_RPSKirky_6 = new ol.format.GeoJSON();
+var features_RPSKirky_6 = format_RPSKirky_6.readFeatures(json_RPSKirky_6, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_RPSKirky_6 = new ol.source.Vector({
+    attributions: '<a href=""></a>',
+});
+jsonSource_RPSKirky_6.addFeatures(features_RPSKirky_6);var lyr_RPSKirky_6 = new ol.layer.Vector({
+                declutter: true,
+                source:jsonSource_RPSKirky_6, 
+                style: style_RPSKirky_6,
+                title: '<img src="styles/legend/RPSKirky_6.png" /> RPS Kirky'
             });
 
-lyr_OpenStreetMap_0.setVisible(true);lyr_RPSKirky_1.setVisible(true);lyr_traveltime4hours_2.setVisible(true);lyr_traveltime3hours_3.setVisible(true);lyr_traveltime2hours_4.setVisible(true);lyr_traveltime1hours_5.setVisible(true);
-var layersList = [lyr_OpenStreetMap_0,lyr_RPSKirky_1,lyr_traveltime4hours_2,lyr_traveltime3hours_3,lyr_traveltime2hours_4,lyr_traveltime1hours_5];
-lyr_RPSKirky_1.set('fieldAliases', {});
+lyr_dmalayer_0.setVisible(true);lyr_OpenStreetMap_1.setVisible(true);lyr_traveltime4hours_2.setVisible(true);lyr_traveltime3hours_3.setVisible(true);lyr_traveltime2hours_4.setVisible(true);lyr_traveltime1hours_5.setVisible(true);lyr_RPSKirky_6.setVisible(true);
+var layersList = [lyr_dmalayer_0,lyr_OpenStreetMap_1,lyr_traveltime4hours_2,lyr_traveltime3hours_3,lyr_traveltime2hours_4,lyr_traveltime1hours_5,lyr_RPSKirky_6];
+lyr_dmalayer_0.set('fieldAliases', {'_uid_': '_uid_', 'objectid': 'objectid', 'name': 'name', 'reference': 'reference', });
 lyr_traveltime4hours_2.set('fieldAliases', {'fid': 'fid', 'id': 'id', 'properties': 'properties', });
 lyr_traveltime3hours_3.set('fieldAliases', {'fid': 'fid', 'id': 'id', 'properties': 'properties', });
 lyr_traveltime2hours_4.set('fieldAliases', {'fid': 'fid', 'id': 'id', 'properties': 'properties', });
 lyr_traveltime1hours_5.set('fieldAliases', {'fid': 'fid', 'id': 'id', 'properties': 'properties', });
-lyr_RPSKirky_1.set('fieldImages', {});
+lyr_RPSKirky_6.set('fieldAliases', {});
+lyr_dmalayer_0.set('fieldImages', {'_uid_': 'TextEdit', 'objectid': 'Range', 'name': 'TextEdit', 'reference': 'TextEdit', });
 lyr_traveltime4hours_2.set('fieldImages', {'fid': 'TextEdit', 'id': 'TextEdit', 'properties': 'TextEdit', });
 lyr_traveltime3hours_3.set('fieldImages', {'fid': 'TextEdit', 'id': 'TextEdit', 'properties': 'TextEdit', });
 lyr_traveltime2hours_4.set('fieldImages', {'fid': 'TextEdit', 'id': 'TextEdit', 'properties': 'TextEdit', });
 lyr_traveltime1hours_5.set('fieldImages', {'fid': 'TextEdit', 'id': 'TextEdit', 'properties': 'TextEdit', });
-lyr_RPSKirky_1.set('fieldLabels', {});
+lyr_RPSKirky_6.set('fieldImages', {});
+lyr_dmalayer_0.set('fieldLabels', {'_uid_': 'no label', 'objectid': 'no label', 'name': 'no label', 'reference': 'no label', });
 lyr_traveltime4hours_2.set('fieldLabels', {'fid': 'no label', 'id': 'no label', 'properties': 'no label', });
-lyr_traveltime3hours_3.set('fieldLabels', {'fid': 'no label', 'id': 'no label', 'properties': 'no label', });
+lyr_traveltime3hours_3.set('fieldLabels', {'fid': 'no label', 'id': 'no label', 'properties': 'header label', });
 lyr_traveltime2hours_4.set('fieldLabels', {'fid': 'no label', 'id': 'no label', 'properties': 'no label', });
 lyr_traveltime1hours_5.set('fieldLabels', {'fid': 'no label', 'id': 'no label', 'properties': 'no label', });
-lyr_traveltime1hours_5.on('precompose', function(evt) {
+lyr_RPSKirky_6.set('fieldLabels', {});
+lyr_RPSKirky_6.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });

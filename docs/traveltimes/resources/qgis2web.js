@@ -63,6 +63,19 @@ layerSwitcher.hidePanel = function() {};
 layerSwitcher.showPanel();
 
 
+    var searchLayer = new ol.SearchLayer({
+      layer: lyr_dmalayer_0,
+      colName: 'name',
+      zoom: 10,
+      collapsed: true,
+      map: map
+    });
+
+    map.addControl(searchLayer);
+    document.getElementsByClassName('search-layer')[0]
+    .getElementsByTagName('button')[0].className +=
+    ' fa fa-binoculars';
+    
 map.getView().fit([-912417.226418, 7247964.322678, -14781.729927, 8182486.627687], map.getSize());
 
 var NO_POPUP = 0
