@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="./resources/qgis2web.css">
         <style>
         .ol-geocoder.gcd-gl-container {
-            top: 100px!important;
+            top: 135px!important;
             left: .5em!important;
             width: 2.1em!important;
             height: 2.1em!important;
@@ -31,7 +31,7 @@
             height: 2.1875em;
         }
         .ol-touch .ol-geocoder.gcd-gl-container{
-            top: 130px!important;
+            top: 180px!important;
         }
         .ol-geocoder .gcd-gl-btn {
             width: 1.375em!important;
@@ -42,11 +42,11 @@
         </style>
 <style>
 .search-layer {
-  top: 135px;
+  top: 170px;
   left: .5em;
 }
 .ol-touch .search-layer {
-  top: 180px;
+  top: 230px;
 }
 </style>
         <style>
@@ -83,6 +83,47 @@
         }
         </style>
         <link href="resources/ol3-geocoder.min.css" rel="stylesheet">
+<style>
+.tooltip {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  color: white;
+  padding: 4px 8px;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+.tooltip-measure {
+  opacity: 1;
+  font-weight: bold;
+}
+.tooltip-static {
+  background-color: #ffcc33;
+  color: black;
+  border: 1px solid white;
+}
+.tooltip-measure:before,
+.tooltip-static:before {
+  border-top: 6px solid rgba(0, 0, 0, 0.5);
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  margin-left: -7px;
+  left: 50%;
+}
+.tooltip-static:before {
+  border-top-color: #ffcc33;
+}
+.measure-control {
+  top: 100px;
+  left: .5em;
+}
+.ol-touch .measure-control {
+  top: 130px;
+}
+</style>
         <style>
         html, body, #map {
             width: 100%;

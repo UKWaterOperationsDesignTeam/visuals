@@ -1,16 +1,19 @@
 var wms_layers = [];
-
-        var lyr_background_0 = new ol.layer.Tile({
-            'title': 'background',
-            'type': 'base',
-            'opacity': 1.000000,
-            
-            
-            source: new ol.source.XYZ({
+var lyr_background_0 = new ol.layer.Tile({
+                            source: new ol.source.TileWMS(({
+                              url: "https://map.publicsectormapping.gov.scot/osmao-scotw-ate01-f5145/service?REQUEST%3DGetCapabilities",
     attributions: '<a href=""></a>',
-                url: 'https://tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=a871e5a95be0441aaaedae1718bd3087'
-            })
-        });var format_dmas_v13_1 = new ol.format.GeoJSON();
+                              params: {
+                                "LAYERS": "m0330",
+                                "TILED": "true",
+                                "VERSION": "1.1.1"},
+                            })),
+                            title: "background",
+                            opacity: 1.000000,
+                            
+                            
+                          });
+              wms_layers.push([lyr_background_0, 0]);var format_dmas_v13_1 = new ol.format.GeoJSON();
 var features_dmas_v13_1 = format_dmas_v13_1.readFeatures(json_dmas_v13_1, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
 var jsonSource_dmas_v13_1 = new ol.source.Vector({
