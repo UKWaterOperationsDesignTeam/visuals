@@ -331,7 +331,7 @@ var onSingleClick = function(evt) {
                     for(var n=0; n<clusteredFeatures.length; n++) {
                         clusterFeature = clusteredFeatures[n];
                         currentFeatureKeys = clusterFeature.getKeys();
-                        popupText += '<li><table>'
+                        popupText += '<li><table width ="300px">'
                         for (var i=0; i<currentFeatureKeys.length; i++) {
                             if (currentFeatureKeys[i] != 'geometry') {
                                 popupField = '';
@@ -357,7 +357,7 @@ var onSingleClick = function(evt) {
             } else {
                 currentFeatureKeys = currentFeature.getKeys();
                 if (doPopup) {
-                    popupText += '<li><table>';
+                    popupText += '<li><table width ="300px">';
                     for (var i=0; i<currentFeatureKeys.length; i++) {
                         if (currentFeatureKeys[i] != 'geometry') {
                             popupField = '';
@@ -398,7 +398,7 @@ var onSingleClick = function(evt) {
                     'INFO_FORMAT': 'text/html',
                 });
             if (url) {
-                popupText = popupText + '<iframe style="width:100%;height:110px;border:0px;" id="iframe" seamless src="' + url + '"></iframe>';
+                popupText = popupText + '<iframe style="width:200px;height:110px;border:0px;" id="iframe" seamless src="' + url + '"></iframe>';
             }
         }
     }
